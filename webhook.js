@@ -7,7 +7,9 @@ let server = http.createServer(function(req, res) {
 	} = req
 	if (method === 'POST' && url === 'webhook') {
 		res.setHeader('Content-Type', 'application/json')
-		res.end(JSON.stringify(ok: true))
+		res.end(JSON.stringify({
+			ok: true
+		}))
 	} else {
 		res.end('Not found')
 	}
