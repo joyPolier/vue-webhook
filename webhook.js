@@ -6,7 +6,7 @@ let server = http.createServer(function(req, res) {
 		url
 	} = req
 	console.log('qeq3~~~~~~~:', req)
-	if (method === 'POST' && url === 'webhook') {
+	if (method === 'POST' && url === '/webhook') {
 		res.setHeader('Content-Type', 'application/json')
 		res.end(JSON.stringify({
 			ok: true
